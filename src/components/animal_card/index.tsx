@@ -15,7 +15,7 @@ const AnimalCard: React.FC = () => {
 
   return (
     <Jumbotron>
-      <h2 className="display-3">Aniaml Card</h2>
+      <h2 className="display-3">Animal Card</h2>
       <p className="lead">{currentImage}</p>
     </Jumbotron>
   );

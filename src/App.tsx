@@ -9,8 +9,8 @@ const App: React.FC = () => {
     <div>
       <Container>
         <Banner />
-        <AnimalCard />
         <AnimalGallery />
+        <AnimalCard />
       </Container>
     </div>
   );
