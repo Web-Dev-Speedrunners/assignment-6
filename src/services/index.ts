@@ -35,5 +35,17 @@ export const FindFact = async (_animal?: AnimalType): Promise<string> => {
 };
 
 export const FindImage = async (_animal?: AnimalType): Promise<string> => {
-  return "";
+  let res: string;
+  const animal: AnimalType =
+    _animal === undefined ? Math.floor(Math.random() * 2) : _animal;
+
+  if (animal === AnimalType.Dog) {
+    const dogFact = await axios.get(links.dogImage);
+    res = dogFact.data.file;
+  } else {
+    const catfact = await axios.get(links.catImage);
+    res = catfact.data.url;
+  }
+
+  return res;
 };
