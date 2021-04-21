@@ -1,7 +1,28 @@
 import React from "react";
+import {
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText,
+  Button,
+} from "reactstrap";
 
-const AnimalCard: React.FC = () => {
-  return <h1>Hello Animal Card</h1>;
-};
+// types for AnimalCard props
+interface IAnimalCard {
+  fact: string;
+  image: string;
+}
 
+// it's a card with animals
+const AnimalCard = ({ fact, image }: IAnimalCard) => (
+  <Card>
+    <CardImg top src={image} alt="Card image cap" />
+    <CardBody>
+      <CardTitle tag="h5">Fact:</CardTitle>
+      <CardText>{fact}</CardText>
+      <Button>Tweet</Button>
+    </CardBody>
+  </Card>
+);
 export default AnimalCard;
