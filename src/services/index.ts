@@ -49,3 +49,19 @@ export const FindImage = async (_animal?: AnimalType): Promise<string> => {
 
   return res;
 };
+
+export const FindRandFacts = async (
+  n_animals: number
+): Promise<Array<string>> =>
+  Promise.all(
+    [...new Array(n_animals)].map(async () =>
+      FindFact(Math.floor(Math.random() * 2))
+    )
+  );
+
+export const FindRandImgs = async (n_animals: number): Promise<Array<string>> =>
+  Promise.all(
+    [...new Array(n_animals)].map(async () =>
+      FindImage(Math.floor(Math.random() * 2))
+    )
+  );
