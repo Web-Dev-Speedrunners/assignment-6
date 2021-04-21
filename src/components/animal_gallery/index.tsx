@@ -23,16 +23,7 @@ interface IAnimalCard {
 // it's a card with animals
 const AnimalCard = ({ fact, image }: IAnimalCard) => (
   <Card>
-    <CardImg
-      top
-      width="auto"
-      height="auto"
-      max-height="350px"
-      max-width="350px"
-      // objectfit="contain"
-      src={image}
-      alt="Card image cap"
-    />
+    <CardImg top src={image} alt="Card image cap" />
     <CardBody>
       <CardTitle tag="h5">Fact:</CardTitle>
       <CardText>{fact}</CardText>
@@ -69,7 +60,7 @@ const AnimalGallery: React.FC = () => {
         </Row>
       </Card>
       <Card>
-        <Button onClick={updateMedia}>Get more </Button>
+        <Button onClick={updateMedia}>Get more pets!</Button>
       </Card>
     </div>
   );
